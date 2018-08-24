@@ -17,7 +17,7 @@ Add to your root composer.json and install with `composer install` or `composer 
 
     {
       require: {
-        "WalkerDevelopment/ldap-auth": "~2.1"
+        "walker-development/ldap-auth": "~2.1"
       }
     }
 
@@ -27,7 +27,7 @@ or use `composer require krenor/ldap-auth` in your console.
 
 Modify your `config/app.php` file and add the service provider to the providers array.
 
-    Krenor\LdapAuth\LdapAuthServiceProvider::class,
+    WalkerDevelopment\LdapAuth\LdapAuthServiceProvider::class,
 
 ### Step 3: Publish the configuration file by running:
 
@@ -58,7 +58,7 @@ Update your `config/auth.php` to use **ldap** as authentication and the **LdapUs
 
 	'ldap-users' => [
 		'driver' => 'ldap',
-		'model'  => \Krenor\LdapAuth\Objects\LdapUser::class,
+		'model'  => \WalkerDevelopment\LdapAuth\Objects\LdapUser::class,
 	],
 ]
 ```
