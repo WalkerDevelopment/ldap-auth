@@ -121,13 +121,11 @@ class Ldap
             ( $fields ?: $this->search_fields )
         );
 
-        if (count($results) > 0) {
-            $entry = $this->ldap->entry($results);
+        $entry = $this->ldap->entry($results);
 
-            // Returning a single LDAP entry
-            if (isset( $entry[0] ) && ! empty( $entry[0] )) {
-                return $entry[0];
-            }
+        // Returning a single LDAP entry
+        if (isset($entry[0]) && !empty($entry[0])) {
+            return $entry[0];
         }
 
         throw new EmptySearchResultException;
@@ -164,12 +162,11 @@ class Ldap
             if (property_exists($this, $key)) {
                 $this->{$key} = $value;
                 // Remove config key
-                unset( $config[$key] );
+                unset($config[$key]);
             }
         }
 
         // Every non-property key is left over and returned
         return $config;
     }
-
 }
