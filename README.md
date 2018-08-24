@@ -1,5 +1,5 @@
-[![Latest Stable Version](https://img.shields.io/packagist/v/krenor/ldap-auth.svg?style=flat-square)](https://packagist.org/packages/krenor/ldap-auth)
-[![License](https://img.shields.io/packagist/l/krenor/ldap-auth.svg?style=flat-square)](https://packagist.org/packages/krenor/ldap-auth)
+[![Latest Stable Version](https://img.shields.io/packagist/v/walker-development/ldap-auth.svg?style=flat-square)](https://packagist.org/packages/walker-development/ldap-auth)
+[![License](https://img.shields.io/packagist/l/walker-development/ldap-auth.svg?style=flat-square)](https://packagist.org/packages/walker-development/ldap-auth)
 
 # ldap-auth
 
@@ -21,7 +21,7 @@ Add to your root composer.json and install with `composer install` or `composer 
       }
     }
 
-or use `composer require krenor/ldap-auth` in your console.
+or use `composer require walker-development/ldap-auth` in your console.
 
 ### Step 2: Add the Service Provider
 
@@ -72,7 +72,7 @@ ldap.php file in your config directory. Adjust the values as you need them.
 ## Usage
 
 ### Authentication
-Look up here for an [Example](https://github.com/krenor/ldap-auth/blob/master/EXAMPLE.md) or
+Look up here for an [Example](https://github.com/WalkerDevelopment/ldap-auth/blob/master/EXAMPLE.md) or
 Look up here for all [Guard methods](https://github.com/neoascetic/laravel-framework/blob/master/src/Illuminate/Auth/Guard.php) using `$this->auth`.
 
 
@@ -95,4 +95,4 @@ Look up here for all [Guard methods](https://github.com/neoascetic/laravel-frame
 
 ## Licence
 
-ldap-auth is distributed under the terms of the [MIT license](https://github.com/krenor/ldap-auth/blob/master/LICENSE.md)
+ldap-auth is distributed under the terms of the [MIT license](https://github.com/WalkerDevelopment/ldap-auth/blob/master/LICENSE.md)
