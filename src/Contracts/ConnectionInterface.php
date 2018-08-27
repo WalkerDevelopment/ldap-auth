@@ -1,6 +1,6 @@
 <?php
 
-namespace Krenor\LdapAuth\Contracts;
+namespace WalkerDevelopment\LdapAuth\Contracts;
 
 interface ConnectionInterface
 {
@@ -134,5 +134,4 @@ interface ConnectionInterface
      * @return array
      */
     public function entry($resultset);
-
 }

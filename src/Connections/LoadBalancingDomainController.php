@@ -1,10 +1,9 @@
 <?php
 
-namespace Krenor\LdapAuth\Connections;
+namespace WalkerDevelopment\LdapAuth\Connections;
 
 class LoadBalancingDomainController extends DomainController
 {
-
     /**
      * @return string
      */

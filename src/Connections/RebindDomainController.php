@@ -1,10 +1,9 @@
 <?php
 
-namespace Krenor\LdapAuth\Connections;
+namespace WalkerDevelopment\LdapAuth\Connections;
 
 class RebindDomainController extends DomainController
 {
-
     /**
      * @return string
      */

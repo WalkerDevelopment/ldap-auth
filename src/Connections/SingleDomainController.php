@@ -1,10 +1,9 @@
 <?php
 
-namespace Krenor\LdapAuth\Connections;
+namespace WalkerDevelopment\LdapAuth\Connections;
 
 class SingleDomainController extends DomainController
 {
-
     /**
      * @return string
      */

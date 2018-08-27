@@ -1,11 +1,11 @@
 <?php
 
-namespace Krenor\LdapAuth\Connections;
+namespace WalkerDevelopment\LdapAuth\Connections;
 
 use ErrorException;
-use Krenor\LdapAuth\Contracts\ConnectionInterface;
-use Krenor\LdapAuth\Contracts\DomainController;
-use Krenor\LdapAuth\Exceptions\ConnectionException;
+use WalkerDevelopment\LdapAuth\Contracts\ConnectionInterface;
+use WalkerDevelopment\LdapAuth\Contracts\DomainController;
+use WalkerDevelopment\LdapAuth\Exceptions\ConnectionException;
 
 class LdapConnection implements ConnectionInterface
 {
@@ -98,7 +98,7 @@ class LdapConnection implements ConnectionInterface
     {
         // Tries to run the LDAP Connection as TLS
         if ($this->tls) {
-            if ( ! ldap_start_tls($this->connection)) {
+            if (! ldap_start_tls($this->connection)) {
                 throw new ConnectionException('Unable to Connect to LDAP using TLS.');
             }
         }
@@ -199,7 +199,7 @@ class LdapConnection implements ConnectionInterface
      *
      * @param array $domain_controller
      *
-     * @return \Krenor\LdapAuth\Connections\DomainController
+     * @return \WalkerDevelopment\LdapAuth\Connections\DomainController
      */
     private function getDomainControllerStrategy(array $domain_controller)
     {
@@ -215,5 +215,4 @@ class LdapConnection implements ConnectionInterface
             return new LoadBalancingDomainController($protocol, $domain_controller);
         }
     }
-
 }

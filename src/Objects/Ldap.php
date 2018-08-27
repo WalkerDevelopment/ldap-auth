@@ -1,11 +1,11 @@
 <?php
 
-namespace Krenor\LdapAuth\Objects;
+namespace WalkerDevelopment\LdapAuth\Objects;
 
-use Krenor\LdapAuth\Connections\LdapConnection;
-use Krenor\LdapAuth\Contracts\ConnectionInterface;
-use Krenor\LdapAuth\Exceptions\EmptySearchResultException;
-use Krenor\LdapAuth\Exceptions\MissingConfigurationException;
+use WalkerDevelopment\LdapAuth\Connections\LdapConnection;
+use WalkerDevelopment\LdapAuth\Contracts\ConnectionInterface;
+use WalkerDevelopment\LdapAuth\Exceptions\EmptySearchResultException;
+use WalkerDevelopment\LdapAuth\Exceptions\MissingConfigurationException;
 
 class Ldap
 {

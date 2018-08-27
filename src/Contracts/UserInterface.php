@@ -1,6 +1,6 @@
 <?php
 
-namespace Krenor\LdapAuth\Contracts;
+namespace WalkerDevelopment\LdapAuth\Contracts;
 
 interface UserInterface
 {
@@ -19,5 +19,4 @@ interface UserInterface
      * @return bool
      */
     public function isMemberOf($group);
-
 }
