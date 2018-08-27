@@ -17,7 +17,7 @@ Add to your root composer.json and install with `composer install` or `composer 
 
     {
       require: {
-        "walker-development/ldap-auth": "~2.1"
+        "walker-development/ldap-auth": "~2.2"
       }
     }
 
