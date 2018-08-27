@@ -73,10 +73,13 @@ class LdapAuthServiceProvider extends ServiceProvider
     private function getLdapConfig()
     {
         if (is_array($this->app['config']['ldap'])) {
-            return $this->app['config']['ldap'];
+            $config = $this->app['config']['ldap'];
+            if (!isset($config['admin_base_dn'])) {
+                $config['admin_base_dn'] = $config['base_dn'];
+            }
+            return $config;
         }
 
         throw new MissingConfigurationException();
     }
-
 }

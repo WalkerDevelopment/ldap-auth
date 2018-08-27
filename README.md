@@ -68,6 +68,7 @@ Update your `config/auth.php` to use **ldap** as authentication and the **LdapUs
 
 If you have run `php artisan vendor:publish` you should see the
 ldap.php file in your config directory. Adjust the values as you need them.
+If your admin user has a different baseDN, include that option as admin_base_dn, otherwise it will use the base_dn set.
 
 ## Usage
 

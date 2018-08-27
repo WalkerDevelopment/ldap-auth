@@ -80,9 +80,9 @@ class LdapAuthUserProvider implements UserProvider
         $username = $credentials['username'];
         $result = $this->ldap->find($username);
 
-        if( !is_null($result) ){
+        if (!is_null($result)) {
             $user = new $this->model;
-            $user->build( $result );
+            $user->build($result);
 
             return $user;
         }
@@ -104,5 +104,4 @@ class LdapAuthUserProvider implements UserProvider
             $credentials['password']
         );
     }
-
 }

@@ -32,6 +32,13 @@ class Ldap
     protected $base_dn;
 
     /**
+     * The base distinguished name for the domain.
+     *
+     * @var string
+     */
+    protected $admin_base_dn;
+
+    /**
      * The filter to execute a search query on.
      *
      * @var string
@@ -72,7 +79,7 @@ class Ldap
         $config = $this->bindConfig($options);
 
         // Build Common Name from Config file and append to base DN
-        $this->admin_user = 'CN=' . $this->admin_user . ',' . $this->base_dn;
+        $this->admin_user = 'CN=' . $this->admin_user . ',' . $this->admin_base_dn;
 
         $this->ldap = new LdapConnection($config);
         $this->connect($this->ldap);
@@ -128,7 +135,7 @@ class Ldap
             return $entry[0];
         }
 
-        throw new EmptySearchResultException;
+        return null;
     }
 
 
