@@ -57,6 +57,20 @@ class LdapAuthUserProvider implements UserProvider
         // this shouldn't be needed as user / password is in ldap
     }
 
+/**
+ * Determine if the user's password needs to be rehashed.
+ *
+ * Since we're using LDAP, we don't rehash passwords here.
+ *
+ * @param  \Illuminate\Contracts\Auth\Authenticatable  $user
+ * @return bool
+ */
+public function rehashPasswordIfRequired(Authenticatable $user): bool
+{
+    return false;
+}
+
+
     /**
      * Update the "remember me" token for the given user in storage.
      *
