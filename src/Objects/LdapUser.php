@@ -177,4 +177,16 @@ class LdapUser implements UserContract, AuthorizableContract, LdapUserContract
         return false;
     }
 
+    /**
+     * Get the name of the password field for the user.
+     *
+     * Since passwords are managed externally (LDAP), we return a dummy field name.
+     *
+     * @return string
+     */
+    public function getAuthPasswordName()
+    {
+        return 'password';
+    }
+
 }
