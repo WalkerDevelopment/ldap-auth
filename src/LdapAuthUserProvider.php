@@ -63,9 +63,11 @@ class LdapAuthUserProvider implements UserProvider
  * Since we're using LDAP, we don't rehash passwords here.
  *
  * @param  \Illuminate\Contracts\Auth\Authenticatable  $user
+ * @param  array  $credentials
+ * @param  bool  $force
  * @return bool
  */
-public function rehashPasswordIfRequired(Authenticatable $user): bool
+public function rehashPasswordIfRequired(Authenticatable $user, array $credentials, bool $force = false): bool
 {
     return false;
 }

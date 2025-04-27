@@ -16,7 +16,7 @@
     }
   ],
   "require": {
-    "laravel/framework": ">=10.0",
+    "laravel/framework": ">=10.43",
     "php": "8.*"
   },
   "require-dev": {
